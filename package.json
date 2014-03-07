@@ -1,0 +1,16 @@
+{
+  "name": "map-app",
+  "version": "0.0.0",
+  "description": "A fleet tracker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rick Carlino",
+  "license": "MIT",
+  "dependencies" : {
+    "socket.io" : "*",
+    "socket.io-wildcard" : "*",
+    "connect" : "*"
+  }
+}

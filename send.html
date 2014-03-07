@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>Send Position</title>
+  <script src="js/compass.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
+</head>
+<body>
+<h1>Location send-er off-er</h1>
+<p></p>
+<script>
+var sendLoc = function() {
+  var location = {
+    lat: compass.lat,
+    lng: compass.lng,
+    acc: compass.acc
+  }
+  var socket = io.connect('http://SERVER_URL_HERE:8000');
+  result = socket.emit('location', location);
+  console.log(result);
+};
+setInterval(sendLoc, 1000);
+</script>
+</body>
+</html>
